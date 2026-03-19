@@ -5,6 +5,12 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { PlansModule } from './modules/plans/plans.module';
 
+import { ConfigModule } from '@nestjs/config';
+
+import { TypeOrmModule } from '@nestjs/typeorm';
+
+import { ServicesModule } from './modules/services/services.module';
+
 @Module({
   imports: [
     ConfigModule.forRoot({
