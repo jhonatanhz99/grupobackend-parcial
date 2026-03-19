@@ -5,6 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ServicesModule } from './modules/services/services.module';
 import { SocioModule } from './modules/socios/socio.module';
+import { PlansModule } from './modules/plans/plans.module';
 
 @Module({
   imports: [
@@ -23,7 +24,8 @@ import { SocioModule } from './modules/socios/socio.module';
     }),
 
     ServicesModule,
-    SocioModule
+    SocioModule,
+    PlansModule
   ],
   controllers: [AppController],
   providers: [AppService],
