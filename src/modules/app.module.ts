@@ -6,7 +6,7 @@ import { AppService } from '../services/app.service';
 
 import { EspecialidadesModule } from './staff/especialidades.module';
 import { EntrenadoresModule } from './staff/entrenadores.module';
-import { ClasesGrupalesModule } from './clases-grupales.module';
+import { ClasesGrupalesModule } from './clases/clases-grupales.module';
 
 @Module({
   imports: [
