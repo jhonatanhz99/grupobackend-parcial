@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
-@Entity('servicios_bienestar') // 👈 nombre EXACTO de tu tabla
+@Entity('servicios_bienestar')
 export class ServiceEntity {
   @PrimaryGeneratedColumn({ name: 'id_servicio' })
   id: number;
