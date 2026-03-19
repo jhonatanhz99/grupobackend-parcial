@@ -1,32 +1,13 @@
 import { Module } from '@nestjs/common';
+import { ConfigModule, ConfigService } from '@nestjs/config';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-
-import { ConfigModule } from '@nestjs/config';
-
-import { TypeOrmModule } from '@nestjs/typeorm';
-
-import { ServicesModule } from './modules/services/services.module';
+import { FacturacionModule } from './modules/facturacion/facturacion.module';
 
 @Module({
-  imports: [
-    ConfigModule.forRoot(),
-
-    TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: process.env.DB_HOST,
-      port: Number(process.env.DB_PORT),
-      username: process.env.DB_USER,
-      password: process.env.DB_PASS,
-      database: process.env.DB_NAME,
-
-      autoLoadEntities: true,
-      synchronize: true,
-    }),
-
-    ServicesModule,
-  ],
+  imports: [FacturacionModule],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
