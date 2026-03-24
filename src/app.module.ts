@@ -3,9 +3,9 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ServicesModule } from './modules/services/services.module';
+//import { ServicesModule } from './modules/services/services.module';
 import { SocioModule } from './modules/socios/socio.module';
-import { PlansModule } from './modules/plans/plans.module';
+//import { PlansModule } from './modules/plans/plans.module';
 
 @Module({
   imports: [
@@ -23,9 +23,9 @@ import { PlansModule } from './modules/plans/plans.module';
       synchronize: true,
     }),
 
-    ServicesModule,
+    //ServicesModule,
     SocioModule,
-    PlansModule
+    //PlansModule
   ],
   controllers: [AppController],
   providers: [AppService],
