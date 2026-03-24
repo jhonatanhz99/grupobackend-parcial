@@ -15,10 +15,11 @@ export class Socio {
   @Column({ type: 'varchar', length: 100, unique: true })
   email: string;
 
-  @Column({ type: 'date' })
+  @Column({ type: 'date', name: 'fecha_nacimiento' })
   fechaNacimiento: Date;
 
   @Column({
+    name: 'estado_membresia',
     type: 'varchar',
     length: 20,
     default: 'activo',
